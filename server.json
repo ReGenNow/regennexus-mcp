@@ -1,8 +1,9 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "regennexus",
+  "name": "io.github.ReGenNow/regennexus-mcp",
+  "version": "0.1.1",
   "displayName": "RegenNexus Hardware Control",
-  "description": "AI-controlled hardware: GPIO, robotics, sensors, cameras, and mesh networking for Raspberry Pi, Jetson, and IoT devices. Control physical hardware with any MCP-compatible AI client.",
+  "description": "AI-controlled hardware: GPIO, robotics, sensors, cameras, mesh networking for IoT",
   "repository": {
     "url": "https://github.com/ReGenNow/regennexus-mcp",
     "source": "github"
@@ -28,6 +29,9 @@
     {
       "registryType": "pypi",
       "name": "regennexus-mcp",
+      "identifier": "regennexus-mcp",
+      "version": "0.1.1",
+      "transport": { "type": "stdio" },
       "runtimeHint": "python",
       "runtime": {
         "command": "regennexus-mcp"

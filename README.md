@@ -2,6 +2,8 @@
 
 <img src="logo.png" alt="RegenNexus Logo" width="64" height="64">
 
+<!-- mcp-name: io.github.ReGenNow/regennexus-mcp -->
+
 MCP (Model Context Protocol) server adapter for [RegenNexus UAP](https://github.com/ReGenNow/ReGenNexus) - enabling AI-controlled hardware.
 
 This package exposes RegenNexus hardware capabilities as MCP tools, allowing Claude Code, Claude Desktop, and other MCP-compatible AI clients to control physical devices.
