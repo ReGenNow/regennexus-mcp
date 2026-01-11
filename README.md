@@ -6,10 +6,12 @@ This package exposes RegenNexus hardware capabilities as MCP tools, allowing Cla
 
 ## Features
 
-- **Hardware Control**: GPIO, robotic arms, sensors, cameras
+- **Hardware Control**: GPIO, PWM, robotic arms, sensors, cameras
+- **Mesh Networking**: Discover and communicate with nodes over LAN (UDP/WebSocket)
+- **Serial/I2C**: Communicate with microcontrollers and sensors
 - **Two Connection Modes**: Local (direct import) or Remote (HTTP API)
-- **Auto-Discovery**: Automatically detects installed RegenNexus
-- **Claude Code Integration**: Drop-in MCP server for Claude
+- **Auto-Discovery**: Automatically detects installed RegenNexus and mesh nodes
+- **MCP Compatible**: Works with Claude, Codex, Gemini, and any MCP client
 
 ## Installation
 
@@ -97,13 +99,57 @@ REGENNEXUS_LOG_LEVEL=INFO
 
 These tools are provided by the `regennexus` package (open source):
 
+### GPIO & Basic I/O
+
 | Tool | Description |
 |------|-------------|
 | `gpio_write` | Set a GPIO pin to HIGH (1) or LOW (0) |
+| `gpio_read` | Read the current state of a GPIO pin |
+| `pwm_write` | Set PWM duty cycle (0-100%) for motors, LEDs, servos |
+
+### Sensors & I2C
+
+| Tool | Description |
+|------|-------------|
+| `read_sensor` | Read value from a sensor (temperature, humidity, etc.) |
+| `i2c_scan` | Scan I2C bus for connected devices |
+
+### Serial Communication
+
+| Tool | Description |
+|------|-------------|
+| `serial_send` | Send data over serial port (UART) |
+| `serial_read` | Read data from serial port |
+
+### Robotics
+
+| Tool | Description |
+|------|-------------|
 | `robot_arm_move` | Move a robotic arm to specified joint positions |
 | `gripper_control` | Open or close a robotic gripper |
-| `read_sensor` | Read value from a sensor |
+
+### Device Management
+
+| Tool | Description |
+|------|-------------|
 | `list_devices` | List all connected hardware devices |
+| `device_info` | Get device details (CPU, memory, IP, temperature) |
+
+### Camera
+
+| Tool | Description |
+|------|-------------|
+| `camera_capture` | Capture a single image from a camera |
+
+### Mesh Network
+
+| Tool | Description |
+|------|-------------|
+| `list_nodes` | List all nodes in the mesh network |
+| `ping_node` | Ping a node and measure network latency |
+| `send_to_node` | Send a message/command to a specific node |
+| `broadcast_message` | Broadcast a message to all nodes |
+| `find_by_capability` | Find nodes with a specific capability |
 
 Premium tools with additional capabilities are available separately.
 
