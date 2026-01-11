@@ -1,0 +1,115 @@
+{
+  "name": "regennexus",
+  "display_name": "RegenNexus Hardware Control",
+  "description": "AI-controlled hardware: GPIO, robotics, sensors, cameras, and mesh networking for Raspberry Pi, Jetson, and IoT devices",
+  "version": "0.1.0",
+  "author": "ReGen Designs LLC",
+  "license": "MIT",
+  "repository": "https://github.com/ReGenNow/regennexus-mcp",
+  "homepage": "https://github.com/ReGenNow/ReGenNexus",
+  "logo": "logo.png",
+  "categories": [
+    "hardware",
+    "iot",
+    "robotics",
+    "automation"
+  ],
+  "tags": [
+    "gpio",
+    "raspberry-pi",
+    "jetson",
+    "robot-arm",
+    "sensors",
+    "camera",
+    "mesh-network",
+    "serial",
+    "i2c",
+    "pwm"
+  ],
+  "install": {
+    "pip": "regennexus-mcp[local]"
+  },
+  "run": {
+    "command": "regennexus-mcp"
+  },
+  "config": {
+    "mcpServers": {
+      "regennexus": {
+        "command": "regennexus-mcp",
+        "env": {
+          "REGENNEXUS_MODE": "auto"
+        }
+      }
+    }
+  },
+  "tools": [
+    {
+      "name": "gpio_write",
+      "description": "Set a GPIO pin to HIGH (1) or LOW (0)"
+    },
+    {
+      "name": "gpio_read",
+      "description": "Read the current state of a GPIO pin"
+    },
+    {
+      "name": "pwm_write",
+      "description": "Set PWM duty cycle (0-100%) for motors, LEDs, servos"
+    },
+    {
+      "name": "read_sensor",
+      "description": "Read value from a sensor (temperature, humidity, etc.)"
+    },
+    {
+      "name": "i2c_scan",
+      "description": "Scan I2C bus for connected devices"
+    },
+    {
+      "name": "serial_send",
+      "description": "Send data over serial port (UART)"
+    },
+    {
+      "name": "serial_read",
+      "description": "Read data from serial port"
+    },
+    {
+      "name": "robot_arm_move",
+      "description": "Move a robotic arm to specified joint positions"
+    },
+    {
+      "name": "gripper_control",
+      "description": "Open or close a robotic gripper"
+    },
+    {
+      "name": "list_devices",
+      "description": "List all connected hardware devices"
+    },
+    {
+      "name": "device_info",
+      "description": "Get device details (CPU, memory, IP, temperature)"
+    },
+    {
+      "name": "camera_capture",
+      "description": "Capture a single image from a camera"
+    },
+    {
+      "name": "list_nodes",
+      "description": "List all nodes in the mesh network"
+    },
+    {
+      "name": "ping_node",
+      "description": "Ping a node and measure network latency"
+    },
+    {
+      "name": "send_to_node",
+      "description": "Send a message/command to a specific node"
+    },
+    {
+      "name": "broadcast_message",
+      "description": "Broadcast a message to all nodes"
+    },
+    {
+      "name": "find_by_capability",
+      "description": "Find nodes with a specific capability"
+    }
+  ]
+}

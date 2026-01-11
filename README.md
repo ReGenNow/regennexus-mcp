@@ -1,6 +1,10 @@
+<p align="center">
+  <img src="logo.png" alt="RegenNexus Logo" width="128" height="128">
+</p>
+
 # RegenNexus MCP Server
 
-MCP (Model Context Protocol) server adapter for [RegenNexus UAP](https://github.com/regennow/regennexus) - enabling AI-controlled hardware.
+MCP (Model Context Protocol) server adapter for [RegenNexus UAP](https://github.com/ReGenNow/ReGenNexus) - enabling AI-controlled hardware.
 
 This package exposes RegenNexus hardware capabilities as MCP tools, allowing Claude Code, Claude Desktop, and other MCP-compatible AI clients to control physical devices.
 
@@ -238,7 +242,7 @@ ruff check src/
 
 ## Related Projects
 
-- [RegenNexus UAP](https://github.com/regennow/regennexus) - Universal Adapter Protocol
+- [RegenNexus UAP](https://github.com/ReGenNow/ReGenNexus) - Universal Adapter Protocol
 - [MCP Specification](https://modelcontextprotocol.io/) - Model Context Protocol
 
 ## License
