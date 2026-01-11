@@ -1,0 +1,95 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "regennexus-mcp"
+version = "0.1.0"
+description = "MCP server adapter for RegenNexus UAP - AI-controlled hardware"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.9"
+authors = [
+    { name = "ReGen Designs LLC" },
+]
+keywords = [
+    "mcp",
+    "model-context-protocol",
+    "claude",
+    "ai",
+    "hardware",
+    "iot",
+    "robotics",
+    "regennexus",
+    "uap",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Home Automation",
+    "Topic :: Scientific/Engineering :: Interface Engine/Protocol Translator",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+dependencies = [
+    "pydantic>=2.0.0",
+]
+
+[project.optional-dependencies]
+remote = [
+    "aiohttp>=3.8.0",
+]
+local = [
+    "regennexus>=0.3.0",
+]
+all = [
+    "aiohttp>=3.8.0",
+    "regennexus>=0.3.0",
+    "python-dotenv>=1.0.0",
+]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+]
+
+[project.scripts]
+regennexus-mcp = "regennexus_mcp.server:main"
+
+[project.urls]
+Homepage = "https://github.com/regennow/regennexus-mcp"
+Documentation = "https://github.com/regennow/regennexus-mcp#readme"
+Repository = "https://github.com/regennow/regennexus-mcp"
+Issues = "https://github.com/regennow/regennexus-mcp/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/regennexus_mcp"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/src",
+    "/README.md",
+    "/CLAUDE.md",
+    "/LICENSE",
+]
+
+[tool.black]
+line-length = 100
+target-version = ["py39"]
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "W", "I"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
