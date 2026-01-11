@@ -1,0 +1,45 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "regennexus",
+  "displayName": "RegenNexus Hardware Control",
+  "description": "AI-controlled hardware: GPIO, robotics, sensors, cameras, and mesh networking for Raspberry Pi, Jetson, and IoT devices. Control physical hardware with any MCP-compatible AI client.",
+  "repository": {
+    "url": "https://github.com/ReGenNow/regennexus-mcp",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/ReGenNow/regennexus-mcp/main/icon-48.png",
+      "sizes": ["48x48"],
+      "mimeType": "image/png"
+    },
+    {
+      "src": "https://raw.githubusercontent.com/ReGenNow/regennexus-mcp/main/icon-128.png",
+      "sizes": ["128x128"],
+      "mimeType": "image/png"
+    },
+    {
+      "src": "https://raw.githubusercontent.com/ReGenNow/regennexus-mcp/main/icon-256.png",
+      "sizes": ["256x256"],
+      "mimeType": "image/png"
+    }
+  ],
+  "packages": [
+    {
+      "registryType": "pypi",
+      "name": "regennexus-mcp",
+      "runtimeHint": "python",
+      "runtime": {
+        "command": "regennexus-mcp"
+      },
+      "environmentVariables": [
+        {
+          "name": "REGENNEXUS_MODE",
+          "description": "Connection mode: auto, local, or remote",
+          "defaultValue": "auto",
+          "required": false
+        }
+      ]
+    }
+  ]
+}
