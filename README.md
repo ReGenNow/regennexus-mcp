@@ -1,8 +1,8 @@
-<p align="center">
-  <img src="logo.png" alt="RegenNexus Logo" width="128" height="128">
-</p>
+<img src="logo.png" alt="RegenNexus Logo" width="80" height="80" align="left" style="margin-right: 15px;">
 
 # RegenNexus MCP Server
+
+<br clear="left"/>
 
 MCP (Model Context Protocol) server adapter for [RegenNexus UAP](https://github.com/ReGenNow/ReGenNexus) - enabling AI-controlled hardware.
 
